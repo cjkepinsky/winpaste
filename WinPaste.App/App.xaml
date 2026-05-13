@@ -1,0 +1,16 @@
+<Application x:Class="WinPaste.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="PanelBackgroundBrush" Color="#F8F9FB" />
+        <SolidColorBrush x:Key="PanelBorderBrush" Color="#CBD2DC" />
+        <SolidColorBrush x:Key="TextPrimaryBrush" Color="#18202B" />
+        <SolidColorBrush x:Key="TextSecondaryBrush" Color="#687384" />
+        <SolidColorBrush x:Key="AccentBrush" Color="#2474D8" />
+        <SolidColorBrush x:Key="CardBackgroundBrush" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="CardBorderBrush" Color="#D8DEE8" />
+        <SolidColorBrush x:Key="PreviewBackgroundBrush" Color="#EEF2F6" />
+        <SolidColorBrush x:Key="HoverBorderBrush" Color="#8CB7EA" />
+        <Color x:Key="PanelShadowColor">#242A33</Color>
+    </Application.Resources>
+</Application>
