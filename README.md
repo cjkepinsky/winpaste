@@ -19,6 +19,8 @@ Windows 11 clipboard history prototype inspired by Paste for macOS.
 
 ## Installer
 
+Download the latest installer from GitHub Releases, or build it locally.
+
 Build local installer artifacts:
 
 ```powershell
