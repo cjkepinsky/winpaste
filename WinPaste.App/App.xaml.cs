@@ -1,3 +1,4 @@
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
@@ -135,13 +136,21 @@ public partial class App : System.Windows.Application
 
         _notifyIcon = new Forms.NotifyIcon
         {
-            Icon = Drawing.SystemIcons.Application,
+            Icon = LoadTrayIcon(),
             Text = "WinPaste",
             ContextMenuStrip = menu,
             Visible = true
         };
 
         _notifyIcon.DoubleClick += (_, _) => Dispatcher.Invoke(() => _pickerWindow?.ShowPicker());
+    }
+
+    private static Drawing.Icon LoadTrayIcon()
+    {
+        var iconPath = Path.Combine(AppContext.BaseDirectory, "Assets", "AppIcon.ico");
+        return File.Exists(iconPath)
+            ? new Drawing.Icon(iconPath)
+            : Drawing.Icon.ExtractAssociatedIcon(Environment.ProcessPath ?? string.Empty) ?? Drawing.SystemIcons.Application;
     }
 
     private void StartClipboardPolling()
